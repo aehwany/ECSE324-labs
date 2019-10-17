@@ -20,7 +20,7 @@ findMin:
 			ADD R3, R1, #8		// R3 points to the first number
 
 			LDR R0, [R3]		// R5 holds the first number in the list, RO = cur_MA
-LOOP:		SUBS R2, R2, #1		// decrement the loop count
+LOOP:			SUBS R2, R2, #1		// decrement the loop count
 			BEQ EXIT
 			ADD R3, R3, #4		// R3 points to next number in the list
 			LDR R5, [R3]		// R1 holds the next number in the list
@@ -37,9 +37,9 @@ EXIT:
 
 DONE:		
 			 
-END:		B END				// infinite loop!
+END:			B END				// infinite loop!
 
-RESULT:		.word	0			// memory assigned for result location
+RESULT:			.word	0			// memory assigned for result location
 N: 			.word	3			// number of entries in the list			
-NUMBERS:	.word	4, 5, 3		// the list data
+NUMBERS:		.word	4, 5, 3			// the list data
 
