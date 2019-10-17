@@ -14,4 +14,4 @@ PUSH_PART:
 POP_PART:
 			POP {R1-R3}		// Pop values from stack in R1, R2, R3
 
-END:		B END           // infinite loop!
+END:			B END           	// infinite loop!
