@@ -5,7 +5,7 @@ _start:
 			// Initialize registers
 			LDR R0, =RESULT			// Pointer to RESULT
 			LDR R1, [R0, #4]		// holds N
-			MOV R2, #1				// keeps value of accumulator
+			MOV R2, #1			// keeps value of accumulator
 							
 			BL FACT
 			B DONE
@@ -19,14 +19,14 @@ FACT:
 			
 
 EXIT:	
-			STR R2, [R0]		// store the result to the memory location
+			STR R2, [R0]			// store the result to the memory location
 			POP {R0-R2}
 			BX LR
 
 DONE:		
 			 
-END:		B END				// infinite loop!
+END:			B END				// infinite loop!
 
-RESULT:		.word	0			// memory assigned for result location
+RESULT:			.word	0			// memory assigned for result location
 N: 			.word	3			// number of entries in the list
 
